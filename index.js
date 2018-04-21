@@ -5,6 +5,8 @@ const isFunction = require('is-function');
 const getMessageType = require('./getMessageType');
 
 const updateLogger = options => ({ update }, next) => {
+  options = options != null ? options : {};
+
   if (!isFunction(options.filter) || options.filter(update)) {
     const log = isFunction(options.log) ? options.log : console.log;
     log(format(update, options));
@@ -14,23 +16,39 @@ const updateLogger = options => ({ update }, next) => {
 };
 
 function format(update, options) {
-  const msg = update.message || update.edited_message;
+  options = options != null ? options : {};
 
-  let str = `(${chalk.blue(msg.message_id)})`;
+  const msg = update.message || update.edited_message;
+  const setColor = (color, str) => (options.colors ? chalk[color](str) : str);
+
+  // message ID
+  let str = `(${setColor('blue', msg.message_id)})`;
+
+  // user
+  const formatUser = ({ first_name, last_name }) => {
+    let name = first_name;
+    if (last_name) name += ` ${last_name}`;
+    return setColor('yellow', name);
+  };
 
   str += ` ${formatUser(msg.from)}`;
 
+  // chat
   const chat = msg.data ? msg.message.chat : msg.chat;
-  if (chat.title) str += ` in ${chalk.green(chat.title)}`;
+  if (chat.title) str += ` in ${setColor('green', chat.title)}`;
 
+  // forward
   const forward = msg.forward_from;
   if (forward) str += ` (fwd from ${formatUser(forward)})`;
 
+  // reply
   const reply = msg.reply_to_message;
-  if (reply) str += ` (re to ${chalk.blue(reply.message_id)})`;
+  if (reply) str += ` (re to ${setColor('blue', reply.message_id)})`;
 
+  // edit
   if (msg.edit_date) str += ' (edit)';
 
+  // content
   if (msg.data) {
     str += ': action';
   } else if (msg.text) {
@@ -45,12 +63,6 @@ function format(update, options) {
   }
 
   return str;
-}
-
-function formatUser({ first_name, last_name }) {
-  let name = first_name;
-  if (last_name) name += ` ${last_name}`;
-  return chalk.yellow(name);
 }
 
 module.exports = Object.assign(updateLogger, { format });
