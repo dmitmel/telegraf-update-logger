@@ -1,14 +1,13 @@
 /* eslint-disable camelcase */
 
 const chalk = require('chalk');
-const isFunction = require('is-function');
 const getMessageType = require('./getMessageType');
 
 const updateLogger = options => ({ update }, next) => {
   options = options != null ? options : {};
 
-  if (!isFunction(options.filter) || options.filter(update)) {
-    const log = isFunction(options.log) ? options.log : console.log;
+  if (options.filter == null || options.filter(update)) {
+    const log = options.log != null ? options.log : console.log;
     log(format(update, options));
   }
 
