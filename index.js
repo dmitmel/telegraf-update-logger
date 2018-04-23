@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 
-const chalk = require('chalk');
+const chalk = require('chalk').default;
 const getMessageType = require('./getMessageType');
 
 const updateLogger = options => ({ update }, next) => {
@@ -69,11 +69,15 @@ function format(update, options) {
     if (text) {
       str += text;
     } else if (sticker) {
-      str += sticker.emoji ? `${sticker.emoji}   sticker` : 'sticker';
+      const { emoji } = sticker;
+      str += emoji ? `${emoji}   sticker` : 'sticker';
     } else {
       const msgType = getMessageType(msg);
-      str += `${msgType || 'message'}`;
+      str += setColor('cyan', msgType || 'message');
     }
+
+    const { caption } = msg;
+    if (caption) str += `, ${caption}`;
   }
 
   return str;
