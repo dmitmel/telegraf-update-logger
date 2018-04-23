@@ -62,7 +62,18 @@ function format(update, options) {
     // edit
     if (msg.edit_date) str += ' (edited)';
 
-    str += `: ${msg.text || getMessageType(msg) || 'message'}`;
+    // content
+    str += `: `;
+
+    const { text, sticker } = msg;
+    if (text) {
+      str += text;
+    } else if (sticker) {
+      str += sticker.emoji ? `${sticker.emoji}   sticker` : 'sticker';
+    } else {
+      const msgType = getMessageType(msg);
+      str += `${msgType || 'message'}`;
+    }
   }
 
   return str;
