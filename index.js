@@ -44,31 +44,25 @@ function format(update, options) {
   if (from) str += `: ${formatUser(from)}`;
   else if (author_signature) str += `: ${setColor('yellow', author_signature)}`;
 
-  // edit
-  if (msg.edit_date) str += ' (edited)';
-
-  // forward
-  const { forward_from, forward_from_chat } = msg;
-  if (forward_from) str += ` fwd[${formatUser(forward_from)}]`;
-  else if (forward_from_chat)
-    str += ` fwd[${setColor('green', forward_from_chat.title)}]`;
-
-  // reply
-  const reply = msg.reply_to_message;
-  if (reply) str += ` re[${setColor('blue', reply.message_id)}]`;
-
-  // content
-  if (msg.data) {
-    str += ': action';
-  } else if (msg.text) {
-    str += `: ${msg.text}`;
-  } else if (msg.new_chat_members) {
+  if (msg.new_chat_members) {
     str += ` added ${msg.new_chat_members.map(formatUser).join(', ')}`;
   } else if (msg.left_chat_member) {
     str += ` removed ${formatUser(msg.left_chat_member)}`;
   } else {
-    const type = getMessageType(msg);
-    str += `: ${type || 'message'}`;
+    // forward
+    const { forward_from, forward_from_chat } = msg;
+    if (forward_from) str += ` fwd[${formatUser(forward_from)}]`;
+    else if (forward_from_chat)
+      str += ` fwd[${setColor('green', forward_from_chat.title)}]`;
+
+    // reply
+    const reply = msg.reply_to_message;
+    if (reply) str += ` re[${setColor('blue', reply.message_id)}]`;
+
+    // edit
+    if (msg.edit_date) str += ' (edited)';
+
+    str += `: ${msg.text || getMessageType(msg) || 'message'}`;
   }
 
   return str;
