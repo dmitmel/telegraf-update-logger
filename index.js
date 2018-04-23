@@ -21,7 +21,11 @@ function format(update, options) {
   const setColor = (color, str) => (options.colors ? chalk[color](str) : str);
 
   // message ID
-  let str = `(${setColor('blue', msg.message_id)})`;
+  let str = `[${setColor('blue', msg.message_id)}]`;
+
+  // chat
+  const { chat } = msg;
+  if (chat.title) str += ` ${setColor('green', chat.title)}:`;
 
   // user
   const formatUser = ({ first_name, last_name }) => {
@@ -32,30 +36,26 @@ function format(update, options) {
 
   str += ` ${formatUser(msg.from)}`;
 
-  // chat
-  const chat = msg.data ? msg.message.chat : msg.chat;
-  if (chat.title) str += ` in ${setColor('green', chat.title)}`;
+  // edit
+  if (msg.edit_date) str += ' (edited)';
 
   // forward
   const forward = msg.forward_from;
-  if (forward) str += ` (fwd from ${formatUser(forward)})`;
+  if (forward) str += ` fwd[${formatUser(forward)}]`;
 
   // reply
   const reply = msg.reply_to_message;
-  if (reply) str += ` (re to ${setColor('blue', reply.message_id)})`;
-
-  // edit
-  if (msg.edit_date) str += ' (edit)';
+  if (reply) str += ` re[${setColor('blue', reply.message_id)}]`;
 
   // content
   if (msg.data) {
     str += ': action';
   } else if (msg.text) {
-    str += ` > ${msg.text}`;
+    str += `: ${msg.text}`;
   } else if (msg.new_chat_members) {
-    str += `: added ${msg.new_chat_members.map(formatUser).join(', ')}`;
+    str += ` added ${msg.new_chat_members.map(formatUser).join(', ')}`;
   } else if (msg.left_chat_member) {
-    str += `: removed ${formatUser(msg.left_chat_member)}`;
+    str += ` removed ${formatUser(msg.left_chat_member)}`;
   } else {
     const type = getMessageType(msg);
     str += `: ${type || 'message'}`;
