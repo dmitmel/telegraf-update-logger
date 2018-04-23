@@ -65,12 +65,14 @@ function format(update, options) {
     // content
     str += `: `;
 
-    const { text, sticker } = msg;
+    const { text, sticker, contact } = msg;
     if (text) {
       str += text;
     } else if (sticker) {
       const { emoji } = sticker;
       str += emoji ? `${emoji}   sticker` : 'sticker';
+    } else if (contact) {
+      str += `${setColor('cyan', 'contact')} of ${formatUser(contact)}`;
     } else {
       const msgType = getMessageType(msg);
       str += setColor('cyan', msgType || 'message');
