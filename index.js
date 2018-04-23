@@ -17,7 +17,12 @@ const updateLogger = options => ({ update }, next) => {
 function format(update, options) {
   options = options != null ? options : {};
 
-  const msg = update.message || update.edited_message;
+  const msg =
+    update.message ||
+    update.edited_message ||
+    update.channel_post ||
+    update.edited_channel_post;
+
   const setColor = (color, str) => (options.colors ? chalk[color](str) : str);
 
   // message ID
@@ -25,7 +30,7 @@ function format(update, options) {
 
   // chat
   const { chat } = msg;
-  if (chat.title) str += ` ${setColor('green', chat.title)}:`;
+  if (chat.title) str += ` ${setColor('green', chat.title)}`;
 
   // user
   const formatUser = ({ first_name, last_name }) => {
@@ -34,14 +39,19 @@ function format(update, options) {
     return setColor('yellow', name);
   };
 
-  str += ` ${formatUser(msg.from)}`;
+  // from
+  const { from, author_signature } = msg;
+  if (from) str += `: ${formatUser(from)}`;
+  else if (author_signature) str += `: ${setColor('yellow', author_signature)}`;
 
   // edit
   if (msg.edit_date) str += ' (edited)';
 
   // forward
-  const forward = msg.forward_from;
-  if (forward) str += ` fwd[${formatUser(forward)}]`;
+  const { forward_from, forward_from_chat } = msg;
+  if (forward_from) str += ` fwd[${formatUser(forward_from)}]`;
+  else if (forward_from_chat)
+    str += ` fwd[${setColor('green', forward_from_chat.title)}]`;
 
   // reply
   const reply = msg.reply_to_message;
