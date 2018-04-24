@@ -14,6 +14,21 @@ const updateLogger = options => ({ update }, next) => {
   return next();
 };
 
+const DEFAULT_COLORS = {
+  id: chalk.blue,
+  chat: chalk.green,
+  user: chalk.yellow,
+  type: chalk.cyan
+};
+
+const noColor = str => str;
+const DISABLED_COLORS = {
+  id: noColor,
+  chat: noColor,
+  user: noColor,
+  type: noColor
+};
+
 function format(update, options) {
   options = options != null ? options : {};
 
@@ -23,26 +38,29 @@ function format(update, options) {
     update.channel_post ||
     update.edited_channel_post;
 
-  const setColor = (color, str) => (options.colors ? chalk[color](str) : str);
+  const colors =
+    typeof options.colors === 'object'
+      ? options.colors
+      : options.colors === true ? DEFAULT_COLORS : DISABLED_COLORS;
 
   // message ID
-  let str = `[${setColor('blue', msg.message_id)}]`;
+  let str = `[${colors.id(msg.message_id)}]`;
 
   // chat
   const { chat } = msg;
-  if (chat.title) str += ` ${setColor('green', chat.title)}`;
+  if (chat.title) str += ` ${colors.chat(chat.title)}`;
 
   // user
   const formatUser = ({ first_name, last_name }) => {
     let name = first_name;
     if (last_name) name += ` ${last_name}`;
-    return setColor('yellow', name);
+    return colors.user(name);
   };
 
   // from
   const { from, author_signature } = msg;
   if (from) str += `: ${formatUser(from)}`;
-  else if (author_signature) str += `: ${setColor('yellow', author_signature)}`;
+  else if (author_signature) str += `: ${colors.user(author_signature)}`;
 
   if (msg.new_chat_members) {
     str += ` added ${msg.new_chat_members.map(formatUser).join(', ')}`;
@@ -53,11 +71,11 @@ function format(update, options) {
     const { forward_from, forward_from_chat } = msg;
     if (forward_from) str += ` fwd[${formatUser(forward_from)}]`;
     else if (forward_from_chat)
-      str += ` fwd[${setColor('green', forward_from_chat.title)}]`;
+      str += ` fwd[${colors.chat(forward_from_chat.title)}]`;
 
     // reply
     const reply = msg.reply_to_message;
-    if (reply) str += ` re[${setColor('blue', reply.message_id)}]`;
+    if (reply) str += ` re[${colors.id(reply.message_id)}]`;
 
     // edit
     if (msg.edit_date) str += ' (edited)';
@@ -70,15 +88,15 @@ function format(update, options) {
       str += text;
     } else if (sticker) {
       const { emoji } = sticker;
-      str += emoji ? `${emoji}   sticker` : 'sticker';
+      str += emoji ? `${emoji}   ${colors.type('sticker')}` : 'sticker';
     } else if (contact) {
-      str += `${setColor('cyan', 'contact')} of ${formatUser(contact)}`;
+      str += `${colors.type('contact')} of ${formatUser(contact)}`;
     } else if (location) {
       const { latitude, longitude } = location;
-      str += `${setColor('cyan', 'location')} on ${latitude} ${longitude}`;
+      str += `${colors.type('location')} on ${latitude} ${longitude}`;
     } else {
       const msgType = getMessageType(msg);
-      str += setColor('cyan', msgType || 'message');
+      str += colors.type('cyan', msgType || 'message');
     }
 
     const { caption } = msg;
