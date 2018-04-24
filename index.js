@@ -65,7 +65,7 @@ function format(update, options) {
     // content
     str += `: `;
 
-    const { text, sticker, contact } = msg;
+    const { text, sticker, contact, location } = msg;
     if (text) {
       str += text;
     } else if (sticker) {
@@ -73,6 +73,9 @@ function format(update, options) {
       str += emoji ? `${emoji}   sticker` : 'sticker';
     } else if (contact) {
       str += `${setColor('cyan', 'contact')} of ${formatUser(contact)}`;
+    } else if (location) {
+      const { latitude, longitude } = location;
+      str += `${setColor('cyan', 'location')} on ${latitude} ${longitude}`;
     } else {
       const msgType = getMessageType(msg);
       str += setColor('cyan', msgType || 'message');
