@@ -14,12 +14,16 @@
     "logging",
     "middleware"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "chalk": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^4.18.1",
     "eslint-config-dmitmel": "^1.1.1",
+    "jest": "^22.4.3",
     "telegraf": "^3.20.0"
   }
 }
