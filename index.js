@@ -1,14 +1,1 @@
-const format = require('./lib/format');
-
-const updateLogger = options => ({ update }, next) => {
-  options = options != null ? options : {};
-
-  if (options.filter == null || options.filter(update)) {
-    const log = options.log != null ? options.log : console.log;
-    log(format(update, options));
-  }
-
-  return next();
-};
-
-module.exports = Object.assign(updateLogger, { format });
+module.exports = require('./lib/middleware');

@@ -4,11 +4,7 @@ const updateLogger = require('./');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-bot.use(
-  updateLogger({
-    colors: true
-  })
-);
+bot.use(updateLogger({ colors: true }));
 
 bot.use(ctx => ctx.reply(updateLogger.format(ctx.update)));
 

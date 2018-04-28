@@ -1,9 +1,9 @@
-describe('telegraf-update-logger', () => {
+describe('telegraf-update-logger/lib/middleware', () => {
   beforeEach(() => jest.resetModules());
 
   function mockWithFormat(mockFormat) {
     jest.doMock('../lib/format', () => mockFormat);
-    return require('../');
+    return require('../lib/middleware');
   }
 
   describe('export function format()', () => {
