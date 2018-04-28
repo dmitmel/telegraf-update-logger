@@ -25,36 +25,30 @@ const updateLogger = require('telegraf-update-logger');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-bot.use(
-  updateLogger({
-    /* options */
-  })
-);
-
-bot.use(ctx =>
-  ctx.reply(
-    updateLogger.format(ctx.update, {
-      /* options */
-    })
-  )
-);
+bot.use(updateLogger());
 
 bot.startPolling();
 ```
 
 ## API
 
-### <code>updateLogger([<a href="#options">options</a>]): function</code>
+### <code>updateLogger(options: <a href="#options">Options</a>?): function</code>
 
-_TODO_
+Creates a middleware that logs every [update](https://core.telegram.org/bots/api#update) and then invokes the next middleware.
 
-### <code>updateLogger.format(<a href="https://core.telegram.org/bots/api#update">update</a>, [<a href="#options">options</a>]): string</code>
+### <code>updateLogger.format(update: <a href="https://core.telegram.org/bots/api#update">Update</a>, options: <a href="#options">Options</a>?): string</code>
 
-_TODO_
+Formats `update` as string.
 
 ### <code>Options</code>
 
-_TODO_
+* **`colors`** `: boolean` `= false`
+
+| Param    | Type                                                                                             | Default       | Description                                                  |
+| -------- | ------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
+| `filter` | <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> |               | Update filter (_middleware-only_)                            |
+| `log`    | `(formattedUpdate: string) => void`                                                              | `console.log` | A function that logs formatted updates (_middleware-only_)   |
+| `colors` | `boolean`                                                                                        | `false`       | Should output be [colored](https://github.com/chalk/chalk/)? |
 
 ## Contribute
 
