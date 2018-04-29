@@ -44,11 +44,11 @@ Formats `update` as string.
 
 * **`colors`** `: boolean` `= false`
 
-| Param    | Type                                                                                             | Default       | Description                                                  |
-| -------- | ------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------ |
-| `filter` | <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> |               | Update filter (_middleware-only_)                            |
-| `log`    | `(formattedUpdate: string) => void`                                                              | `console.log` | A function that logs formatted updates (_middleware-only_)   |
-| `colors` | `boolean`                                                                                        | `false`       | Should output be [colored](https://github.com/chalk/chalk/)? |
+| Param    | Type                                                                                             | Default       | Description                                                                   |
+| -------- | ------------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------- |
+| `filter` | <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> |               | A function that determines which updates should be logged (_middleware-only_) |
+| `log`    | `(formattedUpdate: string) => void`                                                              | `console.log` | A function that logs formatted updates (_middleware-only_)                    |
+| `colors` | `boolean`                                                                                        | `false`       | Should output be [colored](https://github.com/chalk/chalk/)?                  |
 
 ## Contribute
 
