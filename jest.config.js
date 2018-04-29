@@ -1,3 +1,4 @@
 module.exports = {
-  coverageDirectory: 'coverage'
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: ['<rootDir>/lib/**/*.js']
 };
