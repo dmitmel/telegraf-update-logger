@@ -9,7 +9,7 @@
 
 # telegraf-update-logger
 
-> Update logging middleware for [Telegraf](http://telegraf.js.org/)
+> [Update](https://core.telegram.org/bots/api#update) logging middleware for [Telegraf](http://telegraf.js.org/)
 
 ## Install
 
@@ -17,16 +17,64 @@
 yarn add telegraf-update-logger
 ```
 
-## Usage
+## Examples
+
+### log all updates to console with colors
 
 ```js
 const Telegraf = require('telegraf');
 const updateLogger = require('telegraf-update-logger');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
+bot.use(updateLogger({ colors: true }));
+bot.startPolling();
+```
 
-bot.use(updateLogger());
+### log channel posts to file
 
+```js
+const Telegraf = require('telegraf');
+const updateLogger = require('telegraf-update-logger');
+
+const bot = new Telegraf(process.env.BOT_TOKEN);
+bot.use(
+  updateLogger({
+    filter: update => update.channel_post || update.edited_channel_post,
+    log: str => fs.appendFileSync(str)
+  })
+);
+bot.startPolling();
+```
+
+### log all updates with custom colors
+
+```js
+const Telegraf = require('telegraf');
+const updateLogger = require('telegraf-update-logger');
+const chalk = require('chalk');
+
+const bot = new Telegraf(process.env.BOT_TOKEN);
+bot.use(
+  updateLogger({
+    colors: {
+      id: chalk.red,
+      chat: chalk.yellow,
+      user: chalk.green,
+      type: chalk.bold
+    }
+  })
+);
+bot.startPolling();
+```
+
+### reply to all messages with formatted updates
+
+```js
+const Telegraf = require('telegraf');
+const updateLogger = require('telegraf-update-logger');
+
+const bot = new Telegraf(process.env.BOT_TOKEN);
+bot.on('message', ctx => ctx.reply(updateLogger.format(ctx.update)));
 bot.startPolling();
 ```
 
@@ -34,7 +82,7 @@ bot.startPolling();
 
 ### <code>updateLogger(options: object?): function</code>
 
-Creates a middleware that logs every [update](https://core.telegram.org/bots/api#update) and then invokes the next middleware.
+Creates a middleware that logs every update and then invokes the next middleware.
 
 **Params**:
 
@@ -45,7 +93,7 @@ Creates a middleware that logs every [update](https://core.telegram.org/bots/api
 
 ### <code>updateLogger.format(update: <a href="https://core.telegram.org/bots/api#update">Update</a>, options: object?): string</code>
 
-Formats an [update](https://core.telegram.org/bots/api#update) as string.
+Formats an update as string.
 
 **Params**:
 
