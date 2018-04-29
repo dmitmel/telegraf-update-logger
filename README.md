@@ -32,23 +32,30 @@ bot.startPolling();
 
 ## API
 
-### <code>updateLogger(options: <a href="#options">Options</a>?): function</code>
+### <code>updateLogger(options: object?): function</code>
 
 Creates a middleware that logs every [update](https://core.telegram.org/bots/api#update) and then invokes the next middleware.
 
-### <code>updateLogger.format(update: <a href="https://core.telegram.org/bots/api#update">Update</a>, options: <a href="#options">Options</a>?): string</code>
+**Params**:
 
-Formats `update` as string.
+* **`options`** `object?` `= {}`
+  * **`.filter`** <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> – a function that determines which updates should be logged
+  * **`.log`** `(formattedUpdate: string) => void` `= console.log` – a function that logs formatted updates
+  * **... [`format`](#updateloggerformatupdate-update-options-object-string) options**
 
-### <code>Options</code>
+### <code>updateLogger.format(update: <a href="https://core.telegram.org/bots/api#update">Update</a>, options: object?): string</code>
 
-* **`colors`** `: boolean` `= false`
+Formats an [update](https://core.telegram.org/bots/api#update) as string.
 
-| Param    | Type                                                                                             | Default       | Description                                                                   |
-| -------- | ------------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------- |
-| `filter` | <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> |               | A function that determines which updates should be logged (_middleware-only_) |
-| `log`    | `(formattedUpdate: string) => void`                                                              | `console.log` | A function that logs formatted updates (_middleware-only_)                    |
-| `colors` | `boolean`                                                                                        | `false`       | Should output be [colored](https://github.com/chalk/chalk/)?                  |
+**Params**:
+
+* **`update`** [Update](https://core.telegram.org/bots/api#update)
+* **`options`** `object?` `= {}`
+  * **`.colors`** `boolean | object` `= false` – enables/disables/sets [colors](https://github.com/chalk/chalk/)
+    * **`.id`** `function` – a function that sets colors of message IDs
+    * **`.chat`** `function` – a function that sets colors of chat titles
+    * **`.user`** `function` – a function that sets colors of user names
+    * **`.type`** `function` – a function that sets colors of message types
 
 ## Contribute
 
