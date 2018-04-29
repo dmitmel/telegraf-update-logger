@@ -6,17 +6,6 @@ describe('telegraf-update-logger/lib/middleware', () => {
     return require('../lib/middleware');
   }
 
-  describe('export function format()', () => {
-    it("is re-exported from './lib/format.js'", () => {
-      // given:
-      const format = () => {};
-      // when:
-      const updateLogger = mockWithFormat(format);
-      // then:
-      expect(updateLogger.format).toBe(format);
-    });
-  });
-
   describe('export default function updateLogger', () => {
     it('returns a function', () => {
       // given:
