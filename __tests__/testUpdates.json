@@ -1,0 +1,701 @@
+{
+  "message from user": {
+    "update_id": 1,
+    "message": {
+      "message_id": 1,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "message from user without a last name": {
+    "update_id": 2,
+    "message": {
+      "message_id": 2,
+      "from": {
+        "id": -123,
+        "is_bot": false,
+        "first_name": "Baz"
+      },
+      "chat": {
+        "id": -123,
+        "first_name": "Baz",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "message in group": {
+    "update_id": 3,
+    "message": {
+      "message_id": 3,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 456,
+        "title": "Test Group",
+        "type": "group"
+      },
+      "date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "message in super group": {
+    "update_id": 4,
+    "message": {
+      "message_id": 4,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": -456,
+        "title": "Test Supergroup",
+        "type": "supergroup"
+      },
+      "date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "channel post": {
+    "update_id": 5,
+    "channel_post": {
+      "message_id": 5,
+      "chat": {
+        "id": 789,
+        "title": "Test Channel",
+        "type": "channel"
+      },
+      "date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "channel post with author signature": {
+    "update_id": 6,
+    "channel_post": {
+      "message_id": 6,
+      "author_signature": "Foo Bar",
+      "chat": {
+        "id": 789,
+        "title": "Test Channel",
+        "type": "channel"
+      },
+      "date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "forward from user": {
+    "update_id": 7,
+    "message": {
+      "message_id": 7,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "forward_from": {
+        "id": -123,
+        "is_bot": false,
+        "first_name": "Baz"
+      },
+      "forward_date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "forward from channel": {
+    "update_id": 8,
+    "message": {
+      "message_id": 8,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1426325213,
+      "forward_from_chat": {
+        "id": 789,
+        "title": "Test Channel",
+        "type": "channel"
+      },
+      "forward_date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "reply": {
+    "update_id": 9,
+    "message": {
+      "message_id": 9,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1426325213,
+      "reply_to_message": {
+        "message_id": 1,
+        "from": {
+          "id": 314,
+          "is_bot": true,
+          "first_name": "Bot",
+          "username": "bot"
+        },
+        "chat": {
+          "id": 123,
+          "first_name": "Foo",
+          "last_name": "Bar",
+          "type": "private"
+        },
+        "date": 1426325213,
+        "text": "message"
+      },
+      "text": "message"
+    }
+  },
+
+  "edit": {
+    "update_id": 10,
+    "edited_message": {
+      "message_id": 9,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "edit_date": 1426325213,
+      "text": "text"
+    }
+  },
+
+  "edited channel post": {
+    "update_id": 11,
+    "edited_channel_post": {
+      "message_id": 5,
+      "chat": {
+        "id": 789,
+        "title": "Test Channel",
+        "type": "channel"
+      },
+      "date": 1426325213,
+      "edit_date": 1426325213,
+      "text": "text"
+    }
+  },
+
+  "sticker": {
+    "update_id": 12,
+    "message": {
+      "message_id": 12,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1426325213,
+      "sticker": {
+        "width": 512,
+        "height": 512,
+        "set_name": "AppleSteveJobs",
+        "thumb": {
+          "file_id": "AAQCABNTTf8NAAR1C0kJH16kAV-NAAIC",
+          "file_size": 7402,
+          "width": 128,
+          "height": 128
+        },
+        "file_id": "CAADAgADOAcAAmMr4glWoHeTOJVsBwI",
+        "file_size": 53218
+      }
+    }
+  },
+
+  "emoji sticker": {
+    "update_id": 13,
+    "message": {
+      "message_id": 13,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1426325213,
+      "sticker": {
+        "width": 512,
+        "height": 512,
+        "emoji": "😎",
+        "set_name": "AppleSteveJobs",
+        "thumb": {
+          "file_id": "AAQCABNTTf8NAAR1C0kJH16kAV-NAAIC",
+          "file_size": 7402,
+          "width": 128,
+          "height": 128
+        },
+        "file_id": "CAADAgADOAcAAmMr4glWoHeTOJVsBwI",
+        "file_size": 53218
+      }
+    }
+  },
+
+  "photo": {
+    "update_id": 14,
+    "message": {
+      "message_id": 14,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "photo": [
+        {
+          "file_id":
+            "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUWVXYZ_1234",
+          "file_size": 123456,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    }
+  },
+
+  "photo with caption": {
+    "update_id": 15,
+    "message": {
+      "message_id": 15,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "photo": [
+        {
+          "file_id":
+            "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUWVXYZ_1234",
+          "file_size": 123456,
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "caption": "caption"
+    }
+  },
+
+  "audio": {
+    "update_id": 16,
+    "message": {
+      "message_id": 16,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "document": {
+        "file_name": "Alarm.wav",
+        "mime_type": "audio/x-wav",
+        "file_id": "AbCdEfGhIjKlMnOpQrStUvWxYz1234",
+        "file_size": 1234567
+      },
+      "caption": "caption"
+    }
+  },
+
+  "audio with caption": null,
+
+  "document": {
+    "update_id": 17,
+    "message": {
+      "message_id": 17,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "document": {
+        "file_name": "README.md",
+        "mime_type": "text/x-markdown",
+        "file_id": "ABC_DEF_GHI_JKL_MNO_PQRS_TUV_WXYZ",
+        "file_size": 3897
+      }
+    }
+  },
+
+  "video": {
+    "update_id": 18,
+    "message": {
+      "message_id": 18,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "video": {
+        "duration": 10,
+        "width": 640,
+        "height": 360,
+        "mime_type": "video/mp4",
+        "thumb": {
+          "file_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ_1_2_3",
+          "file_size": 9999,
+          "width": 90,
+          "height": 50
+        },
+        "file_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ-1-2-3",
+        "file_size": 2879293
+      }
+    }
+  },
+
+  "video with caption": {
+    "update_id": 19,
+    "message": {
+      "message_id": 19,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "video": {
+        "duration": 10,
+        "width": 640,
+        "height": 360,
+        "mime_type": "video/mp4",
+        "thumb": {
+          "file_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ_1_2_3",
+          "file_size": 9999,
+          "width": 90,
+          "height": 50
+        },
+        "file_id": "ABCDEFGHIJKLMNOPQRSTUVWXYZ-1-2-3",
+        "file_size": 897461
+      },
+      "caption": "caption"
+    }
+  },
+
+  "voice": {
+    "update_id": 20,
+    "message": {
+      "message_id": 20,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "voice": {
+        "duration": 1,
+        "mime_type": "audio/ogg",
+        "file_id": "ABC-DEF-GHI-JKL-MNO-PQRS-TUV-WXYZ",
+        "file_size": 12345
+      }
+    }
+  },
+
+  "location": {
+    "update_id": 21,
+    "message": {
+      "message_id": 21,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "location": {
+        "latitude": 50.450091,
+        "longitude": 30.523415
+      }
+    }
+  },
+
+  "contact": {
+    "update_id": 22,
+    "message": {
+      "message_id": 22,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1426325213,
+      "contact": {
+        "phone_number": "+0123456789",
+        "first_name": "Some",
+        "last_name": "One",
+        "user_id": -123
+      }
+    }
+  },
+
+  "video note": {
+    "update_id": 23,
+    "message": {
+      "message_id": 23,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "video_note": {
+        "duration": 5,
+        "length": 300,
+        "thumb": {
+          "file_id": "abcdefghijklmnopqrstuvwxyz123456",
+          "file_size": 1234,
+          "width": 90,
+          "height": 90
+        },
+        "file_id": "ABCDEFGHJIKLMNOPQRSTUVWXYZ654321",
+        "file_size": 567890
+      }
+    }
+  },
+
+  "new chat members": {
+    "update_id": 24,
+    "message": {
+      "message_id": 24,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 456,
+        "title": "Test Group",
+        "type": "group"
+      },
+      "date": 1426325213,
+      "new_chat_members": [
+        {
+          "id": -123,
+          "is_bot": false,
+          "first_name": "Baz"
+        }
+      ]
+    }
+  },
+
+  "left chat member": {
+    "update_id": 25,
+    "message": {
+      "message_id": 25,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 456,
+        "title": "Test Group",
+        "type": "group"
+      },
+      "date": 1426325213,
+      "left_chat_member": {
+        "id": -123,
+        "is_bot": false,
+        "first_name": "Baz"
+      }
+    }
+  },
+
+  "new chat title": {
+    "update_id": 26,
+    "message": {
+      "message_id": 26,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 456,
+        "title": "New Group",
+        "type": "group"
+      },
+      "date": 1426325213,
+      "new_chat_title": "New Group"
+    }
+  },
+
+  "new chat photo": {
+    "update_id": 27,
+    "message": {
+      "message_id": 27,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "title": "Test Group",
+        "type": "group"
+      },
+      "date": 1426325213,
+      "new_chat_photo": [
+        {
+          "file_id": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234",
+          "file_size": 12345,
+          "width": 160,
+          "height": 160
+        },
+        {
+          "file_id": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz5678",
+          "file_size": 6789,
+          "width": 320,
+          "height": 320
+        },
+        {
+          "file_id": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz_9_0",
+          "file_size": 1000,
+          "width": 640,
+          "height": 640
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`telegraf-update-logger/lib/format export default function format handles audio 1`] = `"[16] Foo Bar: document, caption"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles channel post 1`] = `"[5] Test Channel:: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles channel post with author signature 1`] = `"[6] Test Channel: Foo Bar: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles contact 1`] = `"[22] Foo Bar: contact of Some One"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles document 1`] = `"[17] Foo Bar: document"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles edit 1`] = `"[9] Foo Bar (edited): text"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles edited channel post 1`] = `"[5] Test Channel: (edited): text"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles emoji sticker 1`] = `"[13] Foo Bar: 😎   sticker"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles forward from channel 1`] = `"[8] Foo Bar fwd[Test Channel]: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles forward from user 1`] = `"[7] Foo Bar fwd[Baz]: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles left chat member 1`] = `"[25] Test Group: Foo Bar: removed Baz"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles location 1`] = `"[21] Foo Bar: location on 50.450091 30.523415"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles message from user 1`] = `"[1] Foo Bar: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles message from user without a last name 1`] = `"[2] Baz: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles message in group 1`] = `"[3] Test Group: Foo Bar: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles message in super group 1`] = `"[4] Test Supergroup: Foo Bar: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles new chat members 1`] = `"[24] Test Group: Foo Bar: added Baz"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles new chat photo 1`] = `"[27] Test Group: Foo Bar: changed chat photo"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles new chat title 1`] = `"[26] New Group: Foo Bar: changed chat title"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles photo 1`] = `"[14] Foo Bar: photo"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles photo with caption 1`] = `"[15] Foo Bar: photo, caption"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles reply 1`] = `"[9] Foo Bar re[1]: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles sticker 1`] = `"[12] Foo Bar: sticker"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles video 1`] = `"[18] Foo Bar: video"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles video note 1`] = `"[23] Foo Bar: video_note"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles video with caption 1`] = `"[19] Foo Bar: video, caption"`;
+
+exports[`telegraf-update-logger/lib/format export default function format handles voice 1`] = `"[20] Foo Bar: voice"`;
