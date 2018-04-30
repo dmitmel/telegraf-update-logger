@@ -12,6 +12,7 @@
 [![Travis](https://img.shields.io/travis/dmitmel/telegraf-update-logger.svg?style=flat-square)](https://travis-ci.org/dmitmel/telegraf-update-logger)
 [![Codecov](https://img.shields.io/codecov/c/github/dmitmel/telegraf-update-logger.svg?style=flat-square)](https://codecov.io/gh/dmitmel/telegraf-update-logger)
 [![npm](https://img.shields.io/npm/v/telegraf-update-logger.svg?style=flat-square)](http://npmjs.com/package/telegraf-update-logger)
+[![node](https://img.shields.io/node/v/telegraf-update-logger.svg?style=flat-square)](https://nodejs.org)
 [![MIT License](https://img.shields.io/npm/l/telegraf-update-logger.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
