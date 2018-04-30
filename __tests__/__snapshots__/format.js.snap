@@ -55,3 +55,5 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 exports[`telegraf-update-logger/lib/format export default function format it works when message is video with caption 1`] = `"[19] Foo Bar: video, caption"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is voice 1`] = `"[20] Foo Bar: voice"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is with unknown type 1`] = `"[1] Foo Bar: message"`;

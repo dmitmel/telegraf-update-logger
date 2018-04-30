@@ -721,5 +721,26 @@
         }
       ]
     }
+  },
+
+  "with unknown type": {
+    "update_id": 1,
+    "message": {
+      "message_id": 1,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "unknown_message_type": { "some": "thing" }
+    }
   }
 }
