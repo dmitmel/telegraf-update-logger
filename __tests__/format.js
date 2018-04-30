@@ -4,17 +4,15 @@ const testUpdates = require('./testUpdates.json');
 
 describe('telegraf-update-logger/lib/format', () => {
   describe('export default function format', () => {
-    const UPDATE_WITH_ALL_COLORS = {
-      ...testUpdates.photo,
-      message: {
-        ...testUpdates.photo.message,
+    const UPDATE_WITH_ALL_COLORS = Object.assign({}, testUpdates.photo, {
+      message: Object.assign({}, testUpdates.photo.message, {
         chat: {
           id: 456,
           title: 'Test Group',
           type: 'group'
         }
-      }
-    };
+      })
+    });
 
     function testColorsFlag(colors) {
       // when:
