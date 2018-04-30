@@ -7,7 +7,8 @@ node_js:
 cache: yarn
 
 install: yarn install
-script: yarn test
+script: yarn test --coverage
+after_success: codecov
 
 notifications:
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify

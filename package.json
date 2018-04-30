@@ -15,7 +15,9 @@
     "middleware"
   ],
   "main": "index.js",
-  "files": ["/lib/"],
+  "files": [
+    "/lib/"
+  ],
   "scripts": {
     "test": "jest"
   },
@@ -23,6 +25,7 @@
     "chalk": "^2.4.0"
   },
   "devDependencies": {
+    "codecov": "^3.0.1",
     "eslint": "^4.18.1",
     "eslint-config-dmitmel": "^1.1.1",
     "jest": "^22.4.3",
