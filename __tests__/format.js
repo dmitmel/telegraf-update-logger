@@ -1,3 +1,4 @@
+const chalk = require('chalk').default;
 const stripAnsi = require('strip-ansi');
 const format = require('../lib/format');
 const testUpdates = require('./testUpdates.json');
@@ -24,9 +25,29 @@ describe('telegraf-update-logger/lib/format', () => {
       else expect(formattedUpdate).toEqual(formattedUpdateWithoutColors);
     }
 
-    it('disables colors by default', () => testColorsFlag());
-    it('does not use colors if they are disabled', () => testColorsFlag(false));
-    it('uses colors if they are enabled', () => testColorsFlag(true));
+    it('disables colors by default', () => {
+      testColorsFlag();
+    });
+
+    it('does not use colors if they are disabled', () => {
+      testColorsFlag(false);
+    });
+
+    it('uses colors if they are enabled', () => {
+      const oldEnabled = chalk.enabled;
+      const oldLevel = chalk.level;
+
+      if (chalk.level < 1) {
+        // colors must be forcibly enabled for testing purposes
+        chalk.enabled = true;
+        chalk.level = 1;
+      }
+
+      testColorsFlag(true);
+
+      chalk.enabled = oldEnabled;
+      chalk.level = oldLevel;
+    });
 
     it('supports custom color maps', () => {
       // given:
