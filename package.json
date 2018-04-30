@@ -29,7 +29,6 @@
     "eslint": "^4.18.1",
     "eslint-config-dmitmel": "^1.1.1",
     "jest": "^22.4.3",
-    "strip-ansi": "^4.0.0",
-    "telegraf": "^3.20.0"
+    "strip-ansi": "^4.0.0"
   }
 }
