@@ -3,10 +3,9 @@ const testUpdates = require('./testUpdates.json');
 
 describe('telegraf-update-logger/lib/format', () => {
   describe('export default function format', () => {
-    Object.keys(testUpdates)
-      .filter(testName => testUpdates[testName])
-      .forEach(testName => {
-        it(`handles ${testName}`, () => {
+    describe('it works when message is', () => {
+      Object.keys(testUpdates).forEach(testName => {
+        it(testName, () => {
           // given:
           const update = testUpdates[testName];
           // when:
@@ -15,5 +14,6 @@ describe('telegraf-update-logger/lib/format', () => {
           expect(formattedUpdate).toMatchSnapshot();
         });
       });
+    });
   });
 });

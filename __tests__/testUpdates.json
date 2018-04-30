@@ -1,5 +1,5 @@
 {
-  "message from user": {
+  "from user": {
     "update_id": 1,
     "message": {
       "message_id": 1,
@@ -20,7 +20,7 @@
     }
   },
 
-  "message from user without a last name": {
+  "from user without a last name": {
     "update_id": 2,
     "message": {
       "message_id": 2,
@@ -39,7 +39,7 @@
     }
   },
 
-  "message in group": {
+  "in group": {
     "update_id": 3,
     "message": {
       "message_id": 3,
@@ -59,7 +59,7 @@
     }
   },
 
-  "message in super group": {
+  "in super group": {
     "update_id": 4,
     "message": {
       "message_id": 4,
@@ -108,7 +108,7 @@
     }
   },
 
-  "forward from user": {
+  "forwarded from user": {
     "update_id": 7,
     "message": {
       "message_id": 7,
@@ -135,7 +135,7 @@
     }
   },
 
-  "forward from channel": {
+  "forwarded from channel": {
     "update_id": 8,
     "message": {
       "message_id": 8,
@@ -198,7 +198,7 @@
     }
   },
 
-  "edit": {
+  "edited": {
     "update_id": 10,
     "edited_message": {
       "message_id": 9,
@@ -381,12 +381,36 @@
         "mime_type": "audio/x-wav",
         "file_id": "AbCdEfGhIjKlMnOpQrStUvWxYz1234",
         "file_size": 1234567
+      }
+    }
+  },
+
+  "audio with caption": {
+    "update_id": 16,
+    "message": {
+      "message_id": 16,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "document": {
+        "file_name": "Alarm.wav",
+        "mime_type": "audio/x-wav",
+        "file_id": "AbCdEfGhIjKlMnOpQrStUvWxYz1234",
+        "file_size": 1234567
       },
       "caption": "caption"
     }
   },
-
-  "audio with caption": null,
 
   "document": {
     "update_id": 17,
