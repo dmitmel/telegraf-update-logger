@@ -15,11 +15,10 @@
     "middleware"
   ],
   "main": "index.js",
-  "files": [
-    "/lib/"
-  ],
+  "files": ["/lib/"],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "chalk": "^2.4.0"
