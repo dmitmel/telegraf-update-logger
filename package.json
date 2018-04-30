@@ -1,6 +1,6 @@
 {
   "name": "telegraf-update-logger",
-  "version": "1.1.1",
+  "version": "1.0.0",
   "description": "Update logging middleware for Telegraf",
   "repository": "https://github.com/dmitmel/telegraf-update-logger",
   "bugs": "https://github.com/dmitmel/telegraf-update-logger/issues",
@@ -15,7 +15,9 @@
     "middleware"
   ],
   "main": "index.js",
-  "files": ["/lib/"],
+  "files": [
+    "/lib/"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore ."
