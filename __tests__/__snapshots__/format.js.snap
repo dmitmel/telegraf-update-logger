@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is action 1`] = `"[6] Test Channel: Foo Bar: action: some_action"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is audio 1`] = `"[16] Foo Bar: document"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is audio with caption 1`] = `"[16] Foo Bar: document, caption"`;
@@ -56,4 +58,4 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is voice 1`] = `"[20] Foo Bar: voice"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is with unknown type 1`] = `"[1] Foo Bar: message"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is with unknown type 1`] = `"[29] Foo Bar: message"`;
