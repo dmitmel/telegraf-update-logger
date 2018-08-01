@@ -37,6 +37,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.use(updateLogger({ colors: true }));
 bot.startPolling();
 ```
+![Default config example](./img/default.png)
 
 ### log channel posts to file
 
