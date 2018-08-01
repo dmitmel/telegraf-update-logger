@@ -19,6 +19,8 @@
 
 > [Update](https://core.telegram.org/bots/api#update) logging middleware for [Telegraf](http://telegraf.js.org/)
 
+![Example](example.png)
+
 ## Install
 
 ```bash
@@ -37,7 +39,6 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.use(updateLogger({ colors: true }));
 bot.startPolling();
 ```
-![Default config example](./img/default.png)
 
 ### log channel posts to file
 
@@ -95,10 +96,10 @@ Creates a middleware that logs every update and then invokes the next middleware
 
 **Params**:
 
-* **`options`** `object?` `= {}`
-  * **`.filter`** <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> – a function that determines which updates should be logged
-  * **`.log`** `(formattedUpdate: string) => void` `= console.log` – a function that logs formatted updates
-  * **... [`format`](#updateloggerformatupdate-update-options-object-string) options**
+- **`options`** `object?` `= {}`
+  - **`.filter`** <code>(update: <a href="https://core.telegram.org/bots/api#update">Update</a>) => boolean</code> – a function that determines which updates should be logged
+  - **`.log`** `(formattedUpdate: string) => void` `= console.log` – a function that logs formatted updates
+  - **... [`format`](#updateloggerformatupdate-update-options-object-string) options**
 
 ### <code>updateLogger.format(update: <a href="https://core.telegram.org/bots/api#update">Update</a>, options: object?): string</code>
 
@@ -106,13 +107,13 @@ Formats an update as string.
 
 **Params**:
 
-* **`update`** [Update](https://core.telegram.org/bots/api#update)
-* **`options`** `object?` `= {}`
-  * **`.colors`** `boolean | object` `= false` – enables/disables/sets [colors](https://github.com/chalk/chalk/)
-    * **`.id`** `function` – a function that sets colors of message IDs
-    * **`.chat`** `function` – a function that sets colors of chat titles
-    * **`.user`** `function` – a function that sets colors of user names
-    * **`.type`** `function` – a function that sets colors of message types
+- **`update`** [Update](https://core.telegram.org/bots/api#update)
+- **`options`** `object?` `= {}`
+  - **`.colors`** `boolean | object` `= false` – enables/disables/sets [colors](https://github.com/chalk/chalk/)
+    - **`.id`** `function` – a function that sets colors of message IDs
+    - **`.chat`** `function` – a function that sets colors of chat titles
+    - **`.user`** `function` – a function that sets colors of user names
+    - **`.type`** `function` – a function that sets colors of message types
 
 ## Contribute
 
