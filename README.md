@@ -21,7 +21,7 @@
 
 ![Example](example.png)
 
-_Font: [Ubuntu Mono](https://design.ubuntu.com/font/), Theme: [Brogrammer](https://github.com/mbadolato/iTerm2-Color-Schemes#brogrammer)_
+_Font: [Ubuntu Mono](https://design.ubuntu.com/font/), Theme: [OceanicMaterial](https://github.com/mbadolato/iTerm2-Color-Schemes#oceanicmaterial)_
 
 ## Install
 
