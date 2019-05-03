@@ -52,8 +52,8 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.use(
   updateLogger({
     filter: update => update.channel_post || update.edited_channel_post,
-    log: str => fs.appendFileSync(str)
-  })
+    log: str => fs.appendFileSync('messages.log', str),
+  }),
 );
 bot.startPolling();
 ```
@@ -72,9 +72,9 @@ bot.use(
       id: chalk.red,
       chat: chalk.yellow,
       user: chalk.green,
-      type: chalk.bold
-    }
-  })
+      type: chalk.bold,
+    },
+  }),
 );
 bot.startPolling();
 ```
