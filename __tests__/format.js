@@ -10,9 +10,9 @@ describe('telegraf-update-logger/lib/format', () => {
         chat: {
           id: 456,
           title: 'Test Group',
-          type: 'group'
-        }
-      })
+          type: 'group',
+        },
+      }),
     });
 
     function testColorsFlag(colors) {

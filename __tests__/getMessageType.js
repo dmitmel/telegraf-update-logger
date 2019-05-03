@@ -6,7 +6,7 @@ describe('telegraf-update-logger/lib/getMessageType', () => {
   describe('export const MESSAGE_TYPES', () => {
     it('is an array of strings', () => {
       expect(MESSAGE_TYPES).toEqual(
-        expect.arrayContaining([expect.any(String)])
+        expect.arrayContaining([expect.any(String)]),
       );
     });
   });

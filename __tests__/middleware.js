@@ -21,7 +21,7 @@ describe('telegraf-update-logger/lib/middleware', () => {
         format = () => {},
         options,
         update,
-        next = () => {}
+        next = () => {},
       }) {
         const updateLogger = mockWithFormat(format);
         const middleware = updateLogger(options);
@@ -115,19 +115,19 @@ describe('telegraf-update-logger/lib/middleware', () => {
 
       createFilterTests({
         name: '(when filter is not provided)',
-        shouldLog: true
+        shouldLog: true,
       });
 
       createFilterTests({
         name: "(when filter returns 'true')",
         filter: () => true,
-        shouldLog: true
+        shouldLog: true,
       });
 
       createFilterTests({
         name: "(when filter returns 'false')",
         filter: () => false,
-        shouldLog: false
+        shouldLog: false,
       });
     });
   });
