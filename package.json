@@ -27,8 +27,8 @@
   },
   "devDependencies": {
     "codecov": "^3.3.0",
-    "eslint": "^5.16.0",
-    "eslint-config-dmitmel": "^3.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-dmitmel": "^4.0.0",
     "jest": "^24.7.1",
     "strip-ansi": "^5.2.0"
   },
