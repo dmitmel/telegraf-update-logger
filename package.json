@@ -27,12 +27,12 @@
   },
   "devDependencies": {
     "codecov": "^3.3.0",
-    "eslint": "^6.2.2",
-    "eslint-config-dmitmel": "^4.0.0",
+    "eslint": ">=6.3",
+    "eslint-config-dmitmel": "dmitmel/eslint-config-dmitmel",
     "jest": "^24.7.1",
     "strip-ansi": "^5.2.0"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   }
 }
