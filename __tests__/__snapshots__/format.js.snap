@@ -32,6 +32,8 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is in super group 1`] = `"[4] Test Supergroup: Foo Bar: message"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is inline query 1`] = `"[(inline) 30] Foo Bar: inline query"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is left chat member 1`] = `"[25] Test Group: Foo Bar: removed Baz"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is location 1`] = `"[21] Foo Bar: location on 50.450091 30.523415"`;
