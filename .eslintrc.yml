@@ -1,3 +1,5 @@
-extends: eslint-config-dmitmel/presets/node
+extends:
+  - eslint-config-dmitmel/presets/node
+  - eslint-config-dmitmel/presets/formatting
 env:
   jest: true

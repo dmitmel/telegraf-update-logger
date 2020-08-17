@@ -1,4 +1,4 @@
-const chalk = require('chalk').default;
+const chalk = require('chalk');
 const stripAnsi = require('strip-ansi');
 const format = require('../lib/format');
 const testUpdates = require('./testUpdates.json');
@@ -55,20 +55,20 @@ describe('telegraf-update-logger/lib/format', () => {
       // given:
       const colorNames = ['id', 'chat', 'user', 'type'];
       const colorMap = {};
-      colorNames.forEach(color => {
-        colorMap[color] = jest.fn(str => str);
+      colorNames.forEach((color) => {
+        colorMap[color] = jest.fn((str) => str);
       });
       // when:
       format(UPDATE_WITH_ALL_COLORS, { colors: colorMap });
       // then:
-      colorNames.forEach(color => {
+      colorNames.forEach((color) => {
         const colorFn = colorMap[color];
         expect(colorFn).toHaveBeenCalledTimes(1);
       });
     });
 
     describe('it works when message is', () => {
-      Object.keys(testUpdates).forEach(testName => {
+      Object.keys(testUpdates).forEach((testName) => {
         it(testName, () => {
           // given:
           const update = testUpdates[testName];

@@ -12,7 +12,7 @@ describe('telegraf-update-logger/lib/getMessageType', () => {
   });
 
   describe('export default function getMessageType', () => {
-    MESSAGE_TYPES.forEach(type => {
+    MESSAGE_TYPES.forEach((type) => {
       it(`works for '${type}' messages`, () => {
         // given:
         const update = { [type]: { foo: 'bar' } };

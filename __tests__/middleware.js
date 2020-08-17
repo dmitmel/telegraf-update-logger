@@ -3,7 +3,7 @@ describe('telegraf-update-logger/lib/middleware', () => {
 
   function mockWithFormat(mockFormat) {
     jest.doMock('../lib/format', () => mockFormat);
-    return require('../lib/middleware'); // eslint-disable-line global-require
+    return require('../lib/middleware');
   }
 
   describe('export default function updateLogger', () => {
