@@ -808,7 +808,7 @@
     }
   },
 
-  "poll message": {
+  "regular poll message": {
     "update_id": 32,
     "message": {
       "message_id": 32,
@@ -835,10 +835,91 @@
     }
   },
 
-  "game message": {
+  "quiz poll message": {
     "update_id": 33,
     "message": {
       "message_id": 33,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "poll": {
+        "id": "1",
+        "question": "?",
+        "options": ["1", "2"],
+        "is_anonymous": false,
+        "type": "quiz"
+      }
+    }
+  },
+
+  "unsupported poll type message": {
+    "update_id": 34,
+    "message": {
+      "message_id": 34,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "poll": {
+        "id": "1",
+        "question": "?",
+        "options": ["1", "2"],
+        "is_anonymous": false,
+        "type": "unsupported"
+      }
+    }
+  },
+
+  "anonymous poll message": {
+    "update_id": 35,
+    "message": {
+      "message_id": 35,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "poll": {
+        "id": "1",
+        "question": "?",
+        "options": ["1", "2"],
+        "is_anonymous": true,
+        "type": "regular"
+      }
+    }
+  },
+
+  "game message": {
+    "update_id": 36,
+    "message": {
+      "message_id": 36,
       "from": {
         "id": 123,
         "is_bot": false,
@@ -859,9 +940,9 @@
   },
 
   "pinned message": {
-    "update_id": 34,
+    "update_id": 37,
     "message": {
-      "message_id": 34,
+      "message_id": 37,
       "from": {
         "id": 123,
         "is_bot": false,
@@ -878,6 +959,193 @@
       "pinned_message": {
         "message_id": 1
       }
+    }
+  },
+
+  "chosen inline result": {
+    "update_id": 38,
+    "chosen_inline_result": {
+      "result_id": "1",
+      "query": "inline query",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      }
+    }
+  },
+
+  "chosen inline result with empty query": {
+    "update_id": 38,
+    "chosen_inline_result": {
+      "result_id": "1",
+      "query": "",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      }
+    }
+  },
+
+  "shipping query": {
+    "update_id": 40,
+    "shipping_query": {
+      "id": "1",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      }
+    }
+  },
+
+  "pre-checkout query": {
+    "update_id": 41,
+    "pre_checkout_query": {
+      "id": "1",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      }
+    }
+  },
+
+  "poll": {
+    "update_id": 42,
+    "poll": {
+      "id": "1",
+      "question": "?",
+      "options": ["1", "2"],
+      "is_anonymous": true,
+      "type": "regular",
+      "total_voter_count": 1
+    }
+  },
+
+  "poll answer": {
+    "update_id": 43,
+    "poll_answer": {
+      "poll_id": "1",
+      "option_ids": ["1", "2", "3"],
+      "user": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      }
+    }
+  },
+
+  "poll answer retracted vote": {
+    "update_id": 44,
+    "poll_answer": {
+      "poll_id": "1",
+      "option_ids": [],
+      "user": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      }
+    }
+  },
+
+  "forwarded from user who dissallow adding a link": {
+    "update_id": 45,
+    "message": {
+      "message_id": 45,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "forward_sender_name": "Hidden user",
+      "forward_date": 1426325213,
+      "text": "message"
+    }
+  },
+
+  "callback query without message": {
+    "update_id": 46,
+    "callback_query": {
+      "id": "0123456789876543210",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat_instance": "9876543210123456789",
+      "data": "some_action"
+    }
+  },
+
+  "callback query without chat title": {
+    "update_id": 47,
+    "callback_query": {
+      "id": "0123456789876543210",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "message": {
+        "message_id": 6,
+        "chat": {
+          "id": 789,
+          "type": "group"
+        },
+        "date": 1426325213,
+        "text": "message"
+      },
+      "chat_instance": "9876543210123456789",
+      "data": "some_action"
+    }
+  },
+
+  "callback query without data": {
+    "update_id": 48,
+    "callback_query": {
+      "id": "0123456789876543210",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "message": {
+        "message_id": 6,
+        "chat": {
+          "id": 789,
+          "title": "Test Channel",
+          "type": "channel"
+        },
+        "date": 1426325213,
+        "text": "message"
+      },
+      "chat_instance": "9876543210123456789"
+    }
+  },
+
+  "unsupported update type": {
+    "update_id": 49,
+    "unsupported_type": {
+      "id": "1"
     }
   }
 }

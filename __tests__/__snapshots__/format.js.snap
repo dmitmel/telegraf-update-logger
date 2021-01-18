@@ -2,13 +2,25 @@
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is action 1`] = `"[6] Test Channel: Foo Bar: action: some_action"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is anonymous poll message 1`] = `"[35] Foo Bar: anonymous regular poll"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is audio 1`] = `"[16] Foo Bar: document"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is audio with caption 1`] = `"[16] Foo Bar: document, caption"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is callback query without chat title 1`] = `"[6] Foo Bar: action: some_action"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is callback query without data 1`] = `"[6] Test Channel: Foo Bar"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is callback query without message 1`] = `"[(callback query) 0123456789876543210] Foo Bar: action: some_action"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is channel post 1`] = `"[5] Test Channel:: message"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is channel post with author signature 1`] = `"[6] Test Channel: Foo Bar: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is chosen inline result 1`] = `"chosen inline result: Foo Bar chose 1 via query: inline query"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is chosen inline result with empty query 1`] = `"chosen inline result: Foo Bar chose 1"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is contact 1`] = `"[22] Foo Bar: contact of Some One"`;
 
@@ -26,17 +38,19 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is forwarded from user 1`] = `"[7] Foo Bar fwd[Baz]: message"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is forwarded from user who dissallow adding a link 1`] = `"[45] Foo Bar fwd[Hidden user]: message"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is from user 1`] = `"[1] Foo Bar: message"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is from user without a last name 1`] = `"[2] Baz: message"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is game message 1`] = `"[33] Foo Bar: game game"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is game message 1`] = `"[36] Foo Bar: game game"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is in group 1`] = `"[3] Test Group: Foo Bar: message"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is in super group 1`] = `"[4] Test Supergroup: Foo Bar: message"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is inline query 1`] = `"[(inline) 30] Foo Bar: inline query"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is inline query 1`] = `"[(inline query) 30] Foo Bar: inline query"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is left chat member 1`] = `"[25] Test Group: Foo Bar: removed Baz"`;
 
@@ -52,13 +66,29 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is photo with caption 1`] = `"[15] Foo Bar: photo, caption"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is pinned message 1`] = `"[34] Foo Bar: pinned message #1"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is pinned message 1`] = `"[37] Foo Bar: pinned message #1"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is poll message 1`] = `"[32] Foo Bar:  regular poll"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is poll 1`] = `"[(poll) 1] total voters: 1"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is poll answer 1`] = `"[(poll answer) to 1] Foo Bar: voted [1,2,3]"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is poll answer retracted vote 1`] = `"[(poll answer) to 1] Foo Bar: retracted their vote"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is pre-checkout query 1`] = `"[(pre-checkout query) 1] from Foo Bar"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is quiz poll message 1`] = `"[33] Foo Bar:  quiz"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is regular poll message 1`] = `"[32] Foo Bar:  regular poll"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is reply 1`] = `"[9] Foo Bar re[1]: message"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is shipping query 1`] = `"[(shipping query) 1] from Foo Bar"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is sticker 1`] = `"[12] Foo Bar: sticker"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is unsupported poll type message 1`] = `"[34] Foo Bar:  poll"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is unsupported update type 1`] = `"unsupported update type"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is video 1`] = `"[18] Foo Bar: video"`;
 
