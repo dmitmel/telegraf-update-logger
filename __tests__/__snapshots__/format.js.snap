@@ -12,6 +12,8 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is contact 1`] = `"[22] Foo Bar: contact of Some One"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is dice 1`] = `"[31] Foo Bar: dice 🎯 with value 1"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is document 1`] = `"[17] Foo Bar: document"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is edited 1`] = `"[9] Foo Bar (edited): text"`;

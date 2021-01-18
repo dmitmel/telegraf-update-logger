@@ -782,5 +782,29 @@
       "query": "inline query",
       "offset": ""
     }
+  },
+
+  "dice": {
+    "update_id": 31,
+    "message": {
+      "message_id": 31,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "dice": {
+        "emoji": "🎯",
+        "value": 1
+      }
+    }
   }
 }
