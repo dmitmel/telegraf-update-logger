@@ -50,6 +50,8 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is photo with caption 1`] = `"[15] Foo Bar: photo, caption"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is poll message 1`] = `"[32] Foo Bar:  regular poll"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is reply 1`] = `"[9] Foo Bar re[1]: message"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is sticker 1`] = `"[12] Foo Bar: sticker"`;

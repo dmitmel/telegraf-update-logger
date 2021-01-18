@@ -806,5 +806,32 @@
         "value": 1
       }
     }
+  },
+
+  "poll message": {
+    "update_id": 32,
+    "message": {
+      "message_id": 32,
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat": {
+        "id": 123,
+        "first_name": "Foo",
+        "last_name": "Bar",
+        "type": "private"
+      },
+      "date": 1426325213,
+      "poll": {
+        "id": "1",
+        "question": "?",
+        "options": ["1", "2"],
+        "is_anonymous": false,
+        "type": "regular"
+      }
+    }
   }
 }
