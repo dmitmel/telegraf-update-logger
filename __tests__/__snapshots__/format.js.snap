@@ -30,6 +30,8 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is from user without a last name 1`] = `"[2] Baz: message"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is game message 1`] = `"[33] Foo Bar: game game"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is in group 1`] = `"[3] Test Group: Foo Bar: message"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is in super group 1`] = `"[4] Test Supergroup: Foo Bar: message"`;
