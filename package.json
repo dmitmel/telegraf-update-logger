@@ -22,6 +22,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext .js,.ts --ignore-path .gitignore",
+    "check-fmt": "prettier --check '**/*.{js,ts,json,yml,yaml,md}' --ignore-path .gitignore",
     "clean": "rm -r dist/",
     "build": "tsc",
     "watch": "tsc --watch"

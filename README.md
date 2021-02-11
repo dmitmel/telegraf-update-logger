@@ -51,8 +51,8 @@ const updateLogger = require('telegraf-update-logger');
 const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.use(
   updateLogger({
-    filter: update => update.channel_post || update.edited_channel_post,
-    log: str => fs.appendFileSync('messages.log', str),
+    filter: (update) => update.channel_post || update.edited_channel_post,
+    log: (str) => fs.appendFileSync('messages.log', str),
   }),
 );
 bot.startPolling();
@@ -86,7 +86,7 @@ const Telegraf = require('telegraf');
 const updateLogger = require('telegraf-update-logger');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
-bot.on('message', ctx => ctx.reply(updateLogger.format(ctx.update)));
+bot.on('message', (ctx) => ctx.reply(updateLogger.format(ctx.update)));
 bot.startPolling();
 ```
 

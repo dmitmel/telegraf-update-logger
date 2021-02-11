@@ -319,8 +319,7 @@
       "date": 1426325213,
       "photo": [
         {
-          "file_id":
-            "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUWVXYZ_1234",
+          "file_id": "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUWVXYZ_1234",
           "file_size": 123456,
           "width": 1024,
           "height": 1024
@@ -348,8 +347,7 @@
       "date": 1426325213,
       "photo": [
         {
-          "file_id":
-            "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUWVXYZ_1234",
+          "file_id": "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUWVXYZ_1234",
           "file_size": 123456,
           "width": 1024,
           "height": 1024
