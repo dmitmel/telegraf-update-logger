@@ -1,4 +1,4 @@
-const format = require('./lib/format');
+const format = require('./dist/format');
 const testUpdates = require('./__tests__/testUpdates.json');
 
 console.log();

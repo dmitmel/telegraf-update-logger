@@ -1,9 +1,9 @@
-describe('telegraf-update-logger/lib/middleware', () => {
+describe('telegraf-update-logger/dist/middleware', () => {
   beforeEach(() => jest.resetModules());
 
   function mockWithFormat(mockFormat) {
-    jest.doMock('../lib/format', () => mockFormat);
-    return require('../lib/middleware');
+    jest.doMock('../dist/format', () => mockFormat);
+    return require('../dist/index');
   }
 
   describe('export default function updateLogger', () => {
@@ -17,12 +17,7 @@ describe('telegraf-update-logger/lib/middleware', () => {
     });
 
     describe('returned middleware', () => {
-      function runMiddleware({
-        format = () => {},
-        options,
-        update,
-        next = () => {},
-      }) {
+      function runMiddleware({ format = () => {}, options, update, next = () => {} }) {
         const updateLogger = mockWithFormat(format);
         const middleware = updateLogger(options);
         return middleware({ update }, next);

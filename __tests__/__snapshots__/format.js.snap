@@ -70,15 +70,15 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is poll 1`] = `"[(poll) 1] total voters: 1"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is poll answer 1`] = `"[(poll answer) to 1] Foo Bar: voted [1,2,3]"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is poll answer 1`] = `"[(poll answer) to 1] Foo Bar: voted [1, 2, 3]"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is poll answer retracted vote 1`] = `"[(poll answer) to 1] Foo Bar: retracted their vote"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is pre-checkout query 1`] = `"[(pre-checkout query) 1] from Foo Bar"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is quiz poll message 1`] = `"[33] Foo Bar:  quiz"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is quiz poll message 1`] = `"[33] Foo Bar: quiz"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is regular poll message 1`] = `"[32] Foo Bar:  regular poll"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is regular poll message 1`] = `"[32] Foo Bar: regular poll"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is reply 1`] = `"[9] Foo Bar re[1]: message"`;
 
@@ -86,7 +86,7 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is sticker 1`] = `"[12] Foo Bar: sticker"`;
 
-exports[`telegraf-update-logger/lib/format export default function format it works when message is unsupported poll type message 1`] = `"[34] Foo Bar:  poll"`;
+exports[`telegraf-update-logger/lib/format export default function format it works when message is unsupported poll type message 1`] = `"[34] Foo Bar: poll"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is unsupported update type 1`] = `"unsupported update type"`;
 

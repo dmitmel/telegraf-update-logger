@@ -1,13 +1,11 @@
-const getMessageType = require('../lib/getMessageType');
+const getMessageType = require('../dist/getMessageType');
 
 const { MESSAGE_TYPES } = getMessageType;
 
 describe('telegraf-update-logger/lib/getMessageType', () => {
   describe('export const MESSAGE_TYPES', () => {
     it('is an array of strings', () => {
-      expect(MESSAGE_TYPES).toEqual(
-        expect.arrayContaining([expect.any(String)]),
-      );
+      expect(MESSAGE_TYPES).toEqual(expect.arrayContaining([expect.any(String)]));
     });
   });
 

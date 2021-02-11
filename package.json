@@ -14,16 +14,21 @@
     "logging",
     "middleware"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "/lib/"
   ],
   "scripts": {
     "test": "jest",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint . --ext .js,.ts --ignore-path .gitignore",
+    "clean": "rm -r dist/",
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
   "dependencies": {
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "typegram": "^3.1.9"
   },
   "devDependencies": {
     "codecov": ">=3.3.0",
@@ -34,7 +39,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "jest": ">=24.7.1",
     "prettier": "^2.0.5",
-    "strip-ansi": ">=5.2.0"
+    "strip-ansi": ">=5.2.0",
+    "typescript": "^4.1.5"
   },
   "engines": {
     "node": ">=10"

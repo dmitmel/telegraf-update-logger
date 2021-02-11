@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 const stripAnsi = require('strip-ansi');
-const format = require('../lib/format');
+const format = require('../dist/format');
 const testUpdates = require('./testUpdates.json');
 
 describe('telegraf-update-logger/lib/format', () => {
@@ -22,9 +22,11 @@ describe('telegraf-update-logger/lib/format', () => {
       const formattedUpdate = format(UPDATE_WITH_ALL_COLORS, { colors });
       // then:
       const formattedUpdateWithoutColors = stripAnsi(formattedUpdate);
-      if (colors)
+      if (colors) {
         expect(formattedUpdate).not.toEqual(formattedUpdateWithoutColors);
-      else expect(formattedUpdate).toEqual(formattedUpdateWithoutColors);
+      } else {
+        expect(formattedUpdate).toEqual(formattedUpdateWithoutColors);
+      }
     }
 
     it('disables colors by default', () => {
