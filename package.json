@@ -17,7 +17,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/lib/"
+    "/dist/"
   ],
   "scripts": {
     "test": "jest",
@@ -25,7 +25,8 @@
     "check-fmt": "prettier --check '**/*.{js,ts,json,yml,yaml,md}' --ignore-path .gitignore",
     "clean": "rm -r dist/",
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "prepublishOnly": "\"$npm_execpath\" run build && \"$npm_execpath\" run lint && \"$npm_execpath\" run check-fmt"
   },
   "dependencies": {
     "chalk": "^4.1.0",
