@@ -3,3 +3,25 @@ extends:
   - eslint-config-dmitmel/presets/formatting
 env:
   jest: true
+parserOptions:
+  sourceType: module
+
+settings:
+  node:
+    tryExtensions: ['.ts', '.js', '.json']
+
+rules:
+  func-names: off
+  node/no-unsupported-features/es-syntax:
+    - error
+    - ignores: ['modules']
+
+overrides:
+  - files: '**/*.ts'
+    extends: eslint-config-dmitmel/presets/typescript-with-type-checking-addon
+    rules:
+      '@typescript-eslint/no-namespace': off
+
+  - files: 'src/**/*.ts'
+    parserOptions:
+      project: 'tsconfig.json'

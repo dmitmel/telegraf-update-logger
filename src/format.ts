@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 import * as chalk from 'chalk';
 import * as tg from 'typegram';
 import * as getMessageType from './getMessageType';

@@ -26,6 +26,7 @@ function updateLogger(options: updateLogger.Options): MiddlewareFn {
 }
 
 namespace updateLogger {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   export import format = format_;
 }
 
