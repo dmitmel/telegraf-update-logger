@@ -12,7 +12,8 @@ cache:
 install:
   - yarn install
 script:
-  - yarn run lint --cache --cache-location ".eslintcache/"
+  - yarn run build
+  - yarn run lint --cache
   - yarn test --coverage
 after_success:
   - codecov
