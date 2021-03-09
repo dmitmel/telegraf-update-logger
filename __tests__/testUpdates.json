@@ -1145,5 +1145,140 @@
     "unsupported_type": {
       "id": "1"
     }
+  },
+
+  "my chat member": {
+    "update_id": 50,
+    "my_chat_member": {
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1615314618,
+      "old_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": true,
+          "first_name": "TestBot",
+          "username": "testbot"
+        },
+        "status": "member"
+      },
+      "new_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": true,
+          "first_name": "TestBot",
+          "username": "testbot"
+        },
+        "status": "kicked"
+      }
+    }
+  },
+
+  "my chat member without status change": {
+    "update_id": 51,
+    "my_chat_member": {
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1615314618,
+      "old_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": true,
+          "first_name": "TestBot",
+          "username": "testbot"
+        },
+        "status": "member"
+      },
+      "new_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": true,
+          "first_name": "TestBot",
+          "username": "testbot"
+        },
+        "status": "member"
+      }
+    }
+  },
+
+  "chat member": {
+    "update_id": 51,
+    "chat_member": {
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1615314618,
+      "old_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": false,
+          "first_name": "Baz"
+        },
+        "status": "member"
+      },
+      "new_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": false,
+          "first_name": "Baz"
+        },
+        "status": "kicked"
+      }
+    }
+  },
+
+  "chat member without status change": {
+    "update_id": 51,
+    "chat_member": {
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "date": 1615314618,
+      "old_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": false,
+          "first_name": "Baz"
+        },
+        "status": "member"
+      },
+      "new_chat_member": {
+        "user": {
+          "id": 456,
+          "is_bot": false,
+          "first_name": "Baz"
+        },
+        "status": "member"
+      }
+    }
+  },
+
+  "callback query with game": {
+    "update_id": 52,
+    "callback_query": {
+      "id": "0123456789876543210",
+      "from": {
+        "id": 123,
+        "is_bot": false,
+        "first_name": "Foo",
+        "last_name": "Bar"
+      },
+      "chat_instance": "9876543210123456789",
+      "game_short_name": "game_short_name"
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "telegraf-update-logger",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Update logging middleware for Telegraf",
   "repository": "https://github.com/dmitmel/telegraf-update-logger",
   "bugs": "https://github.com/dmitmel/telegraf-update-logger/issues",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "typegram": "^3.1.9"
+    "typegram": "^3.2.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.15.0",
