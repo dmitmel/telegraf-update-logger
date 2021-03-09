@@ -211,6 +211,42 @@ function format(update: tg.Update, options?: format.Options | null): string {
     return str;
   }
 
+  if ('my_chat_member' in update) {
+    const sender = update.my_chat_member.from;
+    const oldChatMember = update.my_chat_member.old_chat_member;
+    const newChatMember = update.my_chat_member.new_chat_member;
+
+    let str = `[${colors.type('(my chat member)')}]: ${formatUser(sender)}`;
+
+    if (oldChatMember.status !== newChatMember.status) {
+      str += ` changed status of ${formatUser(newChatMember.user)}`;
+      str += ` from '${colors.type(oldChatMember.status)}'`;
+      str += ` to '${colors.type(newChatMember.status)}'`;
+      return str;
+    }
+
+    str += ` changed ${formatUser(newChatMember.user)}`;
+    return str;
+  }
+
+  if ('chat_member' in update) {
+    const sender = update.chat_member.from;
+    const oldChatMember = update.chat_member.old_chat_member;
+    const newChatMember = update.chat_member.new_chat_member;
+
+    let str = `[${colors.type('(chat member)')}]: ${formatUser(sender)}`;
+
+    if (oldChatMember.status !== newChatMember.status) {
+      str += ` changed status of ${formatUser(newChatMember.user)}`;
+      str += ` from '${colors.type(oldChatMember.status)}'`;
+      str += ` to '${colors.type(newChatMember.status)}'`;
+      return str;
+    }
+
+    str += ` changed ${formatUser(newChatMember.user)}`;
+    return str;
+  }
+
   return 'unsupported update type';
 }
 

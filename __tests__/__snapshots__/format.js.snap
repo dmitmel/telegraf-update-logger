@@ -8,6 +8,8 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is audio with caption 1`] = `"[16] Foo Bar: document, caption"`;
 
+exports[`telegraf-update-logger/lib/format export default function format it works when message is callback query with game 1`] = `"[(callback query) 0123456789876543210] Foo Bar: game: game_short_name"`;
+
 exports[`telegraf-update-logger/lib/format export default function format it works when message is callback query without chat title 1`] = `"[6] Foo Bar: action: some_action"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is callback query without data 1`] = `"[6] Test Channel: Foo Bar"`;
@@ -17,6 +19,10 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 exports[`telegraf-update-logger/lib/format export default function format it works when message is channel post 1`] = `"[5] Test Channel:: message"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is channel post with author signature 1`] = `"[6] Test Channel: Foo Bar: message"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is chat member 1`] = `"[(chat member)]: Foo Bar changed status of Baz from 'member' to 'kicked'"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is chat member without status change 1`] = `"[(chat member)]: Foo Bar changed Baz"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is chosen inline result 1`] = `"chosen inline result: Foo Bar chose 1 via query: inline query"`;
 
@@ -55,6 +61,10 @@ exports[`telegraf-update-logger/lib/format export default function format it wor
 exports[`telegraf-update-logger/lib/format export default function format it works when message is left chat member 1`] = `"[25] Test Group: Foo Bar: removed Baz"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is location 1`] = `"[21] Foo Bar: location on 50.450091 30.523415"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is my chat member 1`] = `"[(my chat member)]: Foo Bar changed status of TestBot from 'member' to 'kicked'"`;
+
+exports[`telegraf-update-logger/lib/format export default function format it works when message is my chat member without status change 1`] = `"[(my chat member)]: Foo Bar changed TestBot"`;
 
 exports[`telegraf-update-logger/lib/format export default function format it works when message is new chat members 1`] = `"[24] Test Group: Foo Bar: added Baz"`;
 
