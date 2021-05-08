@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const stripAnsi = require('strip-ansi');
+const ansiRegex = require('ansi-regex');
 const format = require('../dist/format');
 const testUpdates = require('./testUpdates.json');
 
@@ -21,7 +21,7 @@ describe('telegraf-update-logger/lib/format', () => {
       // when:
       const formattedUpdate = format(UPDATE_WITH_ALL_COLORS, { colors });
       // then:
-      const formattedUpdateWithoutColors = stripAnsi(formattedUpdate);
+      const formattedUpdateWithoutColors = formattedUpdate.replace(ansiRegex(), '');
       if (colors) {
         expect(formattedUpdate).not.toEqual(formattedUpdateWithoutColors);
       } else {
