@@ -29,22 +29,22 @@
     "prepublishOnly": "\"$npm_execpath\" run build && \"$npm_execpath\" run lint && \"$npm_execpath\" run check-fmt"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "typegram": "^3.2.0"
+    "chalk": "^4.1.1",
+    "typegram": "^3.3.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.15.0",
-    "@typescript-eslint/parser": "^4.15.0",
-    "codecov": ">=3.3.0",
-    "eslint": ">=6.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "codecov": ">=3.8.2",
+    "eslint": ">=7.26.0",
     "eslint-config-dmitmel": "dmitmel/eslint-config-dmitmel",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": ">=24.7.1",
     "prettier": "^2.0.5",
-    "strip-ansi": ">=5.2.0",
-    "typescript": "^4.1.5"
+    "strip-ansi": ">=7.0.0",
+    "typescript": "^4.2.4"
   },
   "engines": {
     "node": ">=10"
