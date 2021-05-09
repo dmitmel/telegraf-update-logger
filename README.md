@@ -10,7 +10,6 @@
 # telegraf-update-logger
 
 [![CI](https://github.com/dmitmel/telegraf-update-logger/workflows/CI/badge.svg)](https://github.com/dmitmel/telegraf-update-logger/actions?query=workflow:CI)
-[![Codecov](https://img.shields.io/codecov/c/github/dmitmel/telegraf-update-logger.svg)](https://codecov.io/gh/dmitmel/telegraf-update-logger)
 [![npm](https://img.shields.io/npm/v/telegraf-update-logger.svg)](http://npmjs.com/package/telegraf-update-logger)
 [![node](https://img.shields.io/node/v/telegraf-update-logger.svg)](https://nodejs.org)
 [![MIT License](https://img.shields.io/npm/l/telegraf-update-logger.svg)](http://opensource.org/licenses/MIT)
