@@ -2,8 +2,8 @@
   <a href="https://telegram.org/">
     <img height="150" src="https://cdn.worldvectorlogo.com/logos/telegram.svg">
   </a>
-  <a href="http://telegraf.js.org/">
-    <img height="150" src="https://cdn.rawgit.com/telegraf/telegraf/develop/docs/telegraf.png">
+  <a href="https://telegraf.js.org/">
+    <img height="150" src="https://raw.githubusercontent.com/telegraf/telegraf/develop/docs/assets/logo.svg">
   </a>
 </p>
 
