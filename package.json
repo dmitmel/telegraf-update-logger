@@ -35,7 +35,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
-    "ansi-regex": "^5.0.0",
+    "ansi-regex": "^6.0.1",
     "eslint": ">=7.26.0",
     "eslint-config-dmitmel": "dmitmel/eslint-config-dmitmel",
     "eslint-config-prettier": "^8.3.0",
